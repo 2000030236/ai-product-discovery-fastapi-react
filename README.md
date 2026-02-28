@@ -37,13 +37,44 @@ frontend/
 - Node.js 18+
 - [Ollama](https://ollama.com/) installed and running.
 
-### 2. Ollama Configuration
-1. Pull the model (Llama 3 or Gemma):
-   ```bash
-   ollama pull llama3
-   ```
-2. Ensure Ollama is running at `http://localhost:11434`.
+### 2. AI Configuration (Ollama)
+1️⃣ Install Ollama
 
+Download and install from:
+
+👉 https://ollama.com/
+
+After installation, verify:
+
+ollama --version
+2️⃣ Pull the Model
+
+Use a lightweight model:
+
+ollama pull gemma3:1b
+
+(Recommended because it’s small and fast.)
+
+3️⃣ Start Ollama Server
+
+Ollama automatically runs on:
+
+http://localhost:11434
+
+Verify:
+
+curl http://localhost:11434
+4️⃣ Backend Setup
+cd backend
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+
+Run backend:
+
+uvicorn app.main:app --reload
+⚠️ Note: Ollama must be installed and running locally before starting the backend.
+If the LLM service is unavailable, the backend will return a 502 error.
 ### 3. Backend Setup
 1. Navigate to `backend/`.
 2. Setup environment:
