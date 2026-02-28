@@ -73,6 +73,7 @@ pip install -r requirements.txt
 Run backend:
 
 uvicorn app.main:app --reload
+
 ⚠️ Note: Ollama must be installed and running locally before starting the backend.
 If the LLM service is unavailable, the backend will return a 502 error.
 ### 3. Backend Setup
