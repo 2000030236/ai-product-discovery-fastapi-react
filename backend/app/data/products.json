@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "EliteBook Pro",
+    "description": "High-performance laptop for professionals with 32GB RAM and 1TB SSD.",
+    "category": "Laptops",
+    "price": 1499.99,
+    "tags": ["gaming", "work", "high-end"]
+  },
+  {
+    "id": 2,
+    "name": "BudgetPad 15",
+    "description": "Affordable laptop for students and basic office tasks.",
+    "category": "Laptops",
+    "price": 399.99,
+    "tags": ["budget", "student", "portable"]
+  },
+  {
+    "id": 3,
+    "name": "GameMaster G5",
+    "description": "Dedicated gaming laptop with RTX 4060 graphics.",
+    "category": "Laptops",
+    "price": 1199.99,
+    "tags": ["gaming", "powerful", "performance"]
+  },
+  {
+    "id": 4,
+    "name": "ZenTab S",
+    "description": "Lightweight tablet with a stunning OLED display.",
+    "category": "Tablets",
+    "price": 599.99,
+    "tags": ["portable", "media", "creative"]
+  },
+  {
+    "id": 5,
+    "name": "OfficeStream Monitor",
+    "description": "27-inch 4K monitor perfect for multi-tasking and office productivity.",
+    "category": "Monitors",
+    "price": 299.99,
+    "tags": ["work", "4k", "office"]
+  },
+  {
+    "id": 6,
+    "name": "SoundBlast Headphones",
+    "description": "Noise-canceling over-ear headphones with deep bass.",
+    "category": "Audio",
+    "price": 199.99,
+    "tags": ["audio", "music", "noise-canceling"]
+  },
+  {
+    "id": 7,
+    "name": "EcoMouse Wireless",
+    "description": "Sustainable wireless mouse with long battery life.",
+    "category": "Accessories",
+    "price": 29.99,
+    "tags": ["budget", "eco-friendly", "accessory"]
+  },
+  {
+    "id": 8,
+    "name": "PixelDock Hub",
+    "description": "USB-C hub with HDMI, Ethernet, and multi-port charging.",
+    "category": "Accessories",
+    "price": 79.99,
+    "tags": ["work", "connectivity", "useful"]
+  }
+]
