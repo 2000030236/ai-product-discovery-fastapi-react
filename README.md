@@ -82,31 +82,14 @@ Run backend:
 uvicorn app.main:app --host 0.0.0.0 --port 8000
 
 Backend LINK
-# Get Products
+#For Links(Get,Post)
 -->http://16.171.15.182:8000/docs
 
 Backend Json format
 -->http://16.171.15.182:8000/api/products
-
-<<<<<<< HEAD
-uvicorn app.main:app --reload
-### 3. Backend Setup
-1. Navigate to `backend/`.
-2. Setup environment:
-   ```bash
-   python -m venv venv
-   .\venv\Scripts\activate  # Windows
-   pip install -r requirements.txt
-   ```
-3. Copy `.env.example` to `.env` and adjust if necessary.
-4. Run the backend:
-   ```bash
-   python -m app.main
-   ```
 =======
 ⚠️ Note: Ollama must be installed and running locally before starting the backend.
 If the LLM service is unavailable, the backend will return a 502 error.   ```
->>>>>>> 1f2e6e1 (Update README with AWS deployment instructions and background execution setup)
 
 ### 4. Frontend Setup
 Navigate to frontend:
