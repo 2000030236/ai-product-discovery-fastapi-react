@@ -68,14 +68,27 @@ http://localhost:11434
 Verify:
 
 curl http://localhost:11434
+
 4️⃣ Backend Setup
+Navigate to backend:
+
+```bash
 cd backend
 python -m venv venv
-venv\Scripts\activate
+source venv/bin/activate  # Linux / Mac
 pip install -r requirements.txt
 
 Run backend:
+uvicorn app.main:app --host 0.0.0.0 --port 8000
 
+Backend LINK
+# Get Products
+-->http://16.171.15.182:8000/docs
+
+Backend Json format
+-->http://16.171.15.182:8000/api/products
+
+<<<<<<< HEAD
 uvicorn app.main:app --reload
 ### 3. Backend Setup
 1. Navigate to `backend/`.
@@ -90,25 +103,55 @@ uvicorn app.main:app --reload
    ```bash
    python -m app.main
    ```
+=======
+⚠️ Note: Ollama must be installed and running locally before starting the backend.
+If the LLM service is unavailable, the backend will return a 502 error.   ```
+>>>>>>> 1f2e6e1 (Update README with AWS deployment instructions and background execution setup)
 
 ### 4. Frontend Setup
-1. Navigate to `frontend/`.
-2. Install and run:
-   ```bash
-   npm install
-   npm run dev
-   ```
+Navigate to frontend:
 
+```bash
+cd frontend
+npm install
+npm run build
+npx serve -s dist -l 3000
 ## Example API Usage
 ```bash
-# Get Products
-curl http://localhost:8000/api/products
+
+Frontend Link
+-->http://16.171.15.182:3000/
 
 # Ask AI
 curl -X POST http://localhost:8000/api/ask \
      -H "Content-Type: application/json" \
      -d '{"query": "best laptop for gaming"}'
 ```
+
+
+---
+
+# Add AWS Deployment Section (NEW SECTION)
+
+Add this section below setup:
+
+```md
+## AWS Deployment (EC2)
+
+This project was deployed on an AWS EC2 instance.
+
+Ports required:
+- 8000 → FastAPI backend
+- 3000 → Frontend static server
+- 11434 → Ollama (internal only)
+
+-->To run in background on EC2:
+
+```bash
+nohup ollama serve > ollama.log 2>&1 & (ollama server)
+nohup uvicorn app.main:app --host 0.0.0.0 --port 8000 > backend.log 2>&1 & 
+nohup npx serve -s dist -l 3000 > frontend.log 2>&1 &
+
 
 ## Retrieval Logic (RAG)
 1. **Keyword Scoring:** Matches query tokens against product names, categories, descriptions, and tags.
