@@ -1,4 +1,4 @@
-const BASE_URL = '/api';
+const BASE_URL = 'http://16.171.15.182:8000';
 
 export const fetchProducts = async () => {
     const response = await fetch(`${BASE_URL}/products`);
